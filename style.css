@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    height: 1rch
 }
 
 body {
@@ -11,22 +10,30 @@ body {
     color: #ffffff;
     line-height: 1.6;
     padding: 20px;
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fc7%2F71%2F48%2Fc77148c919e613967c1d7fee75d5171c.gif&f=1&nofb=1&ipt=234eaaf6703a2b1f66478da337c6e34b9eadc5f012f67a1618fab3cd82dc1568');
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #08052a;
     border-radius: 15px;
+    height: 60px;
+    width: full;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
 }
-.navbar li{
-
-    display: inline;
-    margin: 0 5px;
-    font-weight: 600;
+.header span {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #08052a;
+    padding: 10px 30px;
+    border-radius: 15px;
+    
 }
 
 .main {
@@ -45,7 +52,7 @@ body {
     margin-top: 100px;
 }
 
-.left img{
+.left img {
     width: 200px;
     height: 200px;
     border-radius: 15px;
@@ -56,7 +63,7 @@ body {
     margin-left: 100px;
 }
 
-.right button{
+.right button {
     background-color: #ffffff;
     color: #08052a;
     padding: 12px 24px;
@@ -71,7 +78,7 @@ body {
 }
 
 .right button:hover {
-    background-color: #08052a;
+    background-color: #5b52bf;
     color: #ffffff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -87,14 +94,176 @@ body {
     margin-top: 100px;
     height: 100px;
     margin-bottom: 0px;
-
 }
 
-/* Media query for phones */
-@media (max-width: 768px) {
+/* so this will be for desktops */
+@media (max-width: 1024px) {
     .main {
+        width: 90%;
+        height: auto;
+        padding: 30px 20px;
+    }
+    
+    .right {
+        margin-left: 60px;
+    }
+    
+    .left img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* and this for tablets and large phones */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .main {
+        width: 95%;
+        margin-top: 60px;
+        padding: 25px 15px;
+    }
+    
+    .right {
+        margin-left: 40px;
+    }
+    
+    .left img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .right h1 {
+        font-size: 1.5rem;
+    }
+    
+    .right p, .right span {
+        font-size: 0.9rem;
+    }
+    
+    .footer {
+        margin-top: 60px;
+        height: auto;
+        padding: 15px 20px;
+    }
+}
+
+/* and this for phones */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .main {
+        flex-direction: column;
+        text-align: center;
         width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        margin-top: 40px;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+    
+    .left img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .right {
+        margin-left: 0;
+    }
+    
+    .right h1 {
+        font-size: 1.3rem;
+    }
+    
+    .right p, .right span {
+        font-size: 0.85rem;
+    }
+    
+    .right button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .footer {
+        margin-top: 40px;
+        padding: 15px;
+        text-align: center;
+    }
+    
+    .navbar li {
+        margin: 0 10px;
+    }
+}
+
+/* and this for even smaller mobile phones */
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+    
+    .main {
+        margin-top: 30px;
+        padding: 25px 15px;
+    }
+    
+    .left img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .right h1 {
+        font-size: 1.2rem;
+    }
+    
+    .right p, .right span {
+        font-size: 0.8rem;
+    }
+    
+    .right button {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    
+    .footer {
+        margin-top: 30px;
+        padding: 12px 15px;
+    }
+    
+    .footer div, .footer span {
+        font-size: 0.9rem;
+    }
+    
+    .navbar li {
+        margin: 0 8px;
+        font-size: 0.9rem;
+    }
+}
+
+/* others small */
+@media (max-width: 320px) {
+    .main {
+        padding: 20px 10px;
+    }
+    
+    .right h1 {
+        font-size: 1.1rem;
+    }
+    
+    .right p, .right span {
+        font-size: 0.75rem;
+    }
+    
+    .navbar li {
+        margin: 0 5px;
+        font-size: 0.85rem;
     }
 }
